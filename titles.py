@@ -7,12 +7,18 @@
 welcome_1 = (
     "Hi {}\n\n"
     "Welcome to ChatGPT bot!\n"
-    "Press /help if you need any help..."
+    "Press /help if you need any help...\n\n"
+
+    "مرحبا بك في بوت ChatGPT\n"
+    "اضغط /help اذا احتجت للمساعدة\n\n"
 )
 # User already have account (/start):
 welcome_2 = (
     "Welcome back {}\n"
-    "Let's begin chat!"
+    "Let's begin chat!\n\n"
+
+    "مرحبا مجددا\n"
+    "دعنا نبدأ المحادثة!"
 )
 # User is new (/start=create):
 welcome_3 = (
@@ -36,7 +42,10 @@ no_account_warn = (
 # History cleared prompt:
 history_cleared = (
     "Dear {}\n\n"
-    "Your history cleared successfully."
+    "Your history cleared successfully.\n\n"
+
+    "عزيزي المستخدم\n"
+    "تم ازالة سجل محادثتك بنجاح"
 )
 
 # Dan mode prompts for /danmode command
@@ -70,6 +79,19 @@ help_message = (
     "this will show all available roles.\n\n"
     "*Chat command usage*:\n"
     "`\n/chat hello world!`"
+
+    "*قائمة بالأوامر الأساسية*:\n"
+    "1. /start: بدء البوت\n"
+    "2. /help: إظهار هذه الرسالة\n\n"
+    "*قائمة بأوامر خاصة بالمحادثات*:\n"
+    "1. /reset: مسح سجل المحادثة\n"
+    "2. /history: للحصول على سجل المحادثة\n"
+    "3. /chat: للمجموعات\n\n"
+    "*الاستخدام الداخلي*:\n"
+    "`\n@chtgptfrebot roles`\n"
+    "هذه ستعرض قائمة بكل الادوار المتاحة.\n\n"
+    "*الاستخدام في المجموعات*:\n"
+    "`\n/chat hello world!`"
 )
 
 # Features prompt for (/features) command
@@ -89,7 +111,7 @@ features = (
     "4. Voice response\n"
     "5. Multi language\n\n"
     "Please submit your Issue or Request in here:\n"
-    "https://github.com/Kourva/AwesomeChatGPTBot/issues\n\n"
+    "https://github.com/Abdullrahman-Dawaliby/AwesomeChatGPTBot/issues\n\n"
     "*Recent changes*:\n"
     "# Added multiple providers.\n"
     "# Changes on commands.\n"
@@ -101,11 +123,16 @@ chat_help = (
     "Hi {}\n"
     "Please Ask your question after /chat\n\n"
     "*Example*: /chat hi"
+
+    "مرحبا عزيزي المستخدم\n"
+    "يرجى الطلب بعد الأمر /chat في المجموعات\n\n"
+    "*مثال*: /chat hi"
 )
 
 # Response prompt:
 response_prompt = (
-    "Generating response... Please wait."
+    "Generating response... Please wait.\n"
+    "اشرب كاسة شاي او فنجان قهوة وانت عم تحكي"
 )
 
 

@@ -24,7 +24,7 @@ from telebot.util import quick_markup, extract_arguments
 import utils
 import titles
 from utils import chat_function
-from Providers.deepinfra import deep_infra_chat
+#from Providers.deepinfra import deep_infra_chat
 from Providers.fstha import fstha_chat_gpt
 from Providers.onlinegpt import online_gpt_chat
 from Providers.fakeopen import fakeopen_chat
@@ -32,7 +32,7 @@ from Providers.fakeopen import fakeopen_chat
 # Initialize the bot with 'TOKEN' defined in utils.py file.
 try:
     GPTbot: ClassVar[Any] = telebot.TeleBot(utils.TOKEN)
-    print(f"\33[0;32m[*] The Bot is online (bot id: {GPTbot.get_me().id})\33[m...")
+    print(f"\33[0;32m[*] The Bot is online and one piece is the best(bot id: {GPTbot.get_me().id})\33[m...")
 
 # Handle invalid token exception
 except telebot.apihelper.ApiTelegramException as ue:
@@ -144,13 +144,13 @@ def ping_command_handler(message: ClassVar[Any]) -> NoReturn:
 
     # Make status mapping for providers
     status_mapping = {
-        "deep_infra_chat": "Offline",
+        #"deep_infra_chat": "Offline",
         "fstha_chat_gpt": "Offline",
         "online_gpt_chat": "Offline",
         "fakeopen_chat": "Offline"
     }
     # Check providers availability
-    for provider in [deep_infra_chat, fstha_chat_gpt, online_gpt_chat, fakeopen_chat]:
+    for provider in [fstha_chat_gpt, online_gpt_chat, fakeopen_chat]:
         if provider([{"role": "user", "content": "Hi"}]):
             status_mapping[provider.__name__] = "Online"
 
@@ -161,7 +161,7 @@ def ping_command_handler(message: ClassVar[Any]) -> NoReturn:
             message_id=prompt.message_id,
             text=(
                 f"*Status for available providers*:\n\n"
-                f"_Deepinfra AI_ (LLAMA 70b):\nstatus -> *{status_mapping['deep_infra_chat']}*\n\n"
+                #f"_Deepinfra AI_ (LLAMA 70b):\nstatus -> *{status_mapping['deep_infra_chat']}*\n\n"
                 f"_Fstha GPT_ (GPT 3.5 Turbo):\nstatus -> *{status_mapping['fstha_chat_gpt']}*\n\n"
                 f"_Online GPT_ (GPT 3.5 Turbo):\nstatus -> *{status_mapping['online_gpt_chat']}*\n\n"
                 f"_Fakeopen AI_ (GPT 3.5 Turbo):\nstatus -> *{status_mapping['fakeopen_chat']}*"

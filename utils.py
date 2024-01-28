@@ -15,23 +15,20 @@ from typing import (
 import requests
 
 # Local Application/Library Specific Imports
-from Providers.deepinfra import deep_infra_chat
+#from Providers.deepinfra import deep_infra_chat
 from Providers.fstha import fstha_chat_gpt
 from Providers.onlinegpt import online_gpt_chat
 from Providers.fakeopen import fakeopen_chat
 
 
 # Telegram bot's token
-try:
-    with open("token.txt") as token_file:
-        TOKEN: str = token_file.read().strip()
-except Exception as ex:
-    print("Something is wrong with token file! Check it\n\nLog: {ex}")
+
+TOKEN: str = "6976233461:AAHsl34gvigX5PtogERnWBk2nNbSH7nBXSo"
 
 
 # Get providers list
 PROVIDERS: List[Callable] = [
-    deep_infra_chat, # Model: LLAMA-2-70b-Chat-HF
+    #deep_infra_chat, # Model: LLAMA-2-70b-Chat-HF
     fstha_chat_gpt,  # Model: ChatGPT-3.5-Turbo
     online_gpt_chat, # Model: ChatGPT-3.5-Turbo
     fakeopen_chat    # Model: ChatGPT-3.5-Turbo
